@@ -19,4 +19,8 @@ class Album
         $this->artist = (isset($data['artist'])) ? $data['artist'] : null;
         $this->title  = (isset($data['title'])) ? $data['title'] : null;
     }
+
+    public function  getArrayCopy(){
+        return get_object_vars($this);
+    }
 }
